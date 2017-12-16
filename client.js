@@ -9,11 +9,12 @@ function onReady() {
 
 // Gets info out of input fields and returns an array of the data
 function newEmployeeInfo() {
-  var empFName = $('#firstName').val();
-  var empLName = $('#lastName').val();
-  var empID = $('#empID').val();
-  var empJobTitle = $('#jobTitle').val();
-  var empSal = Number($('#annualSalary').val());
-  var empInfoArray = [empFName, empLName, empID, empJobTitle, empSal];
-  return empInfoArray;
+  var employeeFName = $('#firstName').val();
+  var employeeLName = $('#lastName').val();
+  var employeeID = $('#empID').val();
+  var employeeTitle = $('#jobTitle').val();
+  var employeeSal = Number($('#annualSalary').val());
+  var employeeInfoArray = [employeeFName, employeeLName, employeeID,
+    employeeTitle, employeeSal];
+  return employeeInfoArray;
 } // end newEmployeeInfo()
