@@ -29,5 +29,7 @@ function addNewEmployee() {
   $row.append('<td>'+ employeeData[2] + '</td>');
   $row.append('<td>'+ employeeData[3] + '</td>');
   $row.append('<td>'+ employeeData[4] + '</td>');
+  $row.data('salary', employeeData[4]);
   $('#employeeData').append($row);
+  $('input').not('#submitEmployee').val('');
 } // end addNewEmployee()
