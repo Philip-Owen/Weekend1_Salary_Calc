@@ -8,6 +8,54 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
+    <div ID="main-head">
+      <h1>Salary Calculator</h1>
+      <div id="employeeInput">
+        <div id="top-row">
+          <input type="text" id="firstName" placeholder="First Name">
+          <input type="text" id="lastName" placeholder="Last Name">
+          <input type="number" id="empID" placeholder="Employee ID">
+        </div>
+        <div id="bottom-row">
+          <input type="text" id="jobTitle" placeholder="Job Title">
+          <input type="number" id="annualSalary" placeholder="Annual Salary">
+          <input type="button" id="submitEmployee" value="Submit">
+        </div>
+      </div>
+    </div>
+    <div id="employeeTable">
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee ID</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+          </tr>
+        </thead>
+        <tbody id="employeeData">
+          <tr>
+            <td>Tom</td>
+            <td>Thompson</td>
+            <td>8675309</td>
+            <td>Field Engeineer</td>
+            <td>65,000</td>
+          </tr>
+          <tr>
+            <td>Gina</td>
+            <td>Smith</td>
+            <td>90210</td>
+            <td>Chief Technology Officer</td>
+            <td>185,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td id="salCosts">Monthy Costs: <span id="salTotal"></span></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </body>
 </html>
