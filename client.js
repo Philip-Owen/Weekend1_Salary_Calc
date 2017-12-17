@@ -33,7 +33,7 @@ function addNewEmployee() {
   $('#employeeData').append($row);
   $('input').not('#submitEmployee').val('');
   var totalMontlyCost = monthyCosts();
-$('#salTotal').html(totalMontlyCost);
+  $('#salTotal').html(totalMontlyCost);
 } // end addNewEmployee()
 
 // Does calculations for getting the monthly salary costs.
