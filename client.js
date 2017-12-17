@@ -1,4 +1,4 @@
-console.log('js');
+
 
 $(document).ready(onReady);
 
@@ -74,4 +74,7 @@ function monthyCosts() {
 // Removes employee rows off DOM
 function removeEmployee() {
   $(this).parents('tr').remove();
+  // Once a employee is removed the monthlyCosts function is ran, giving a total
+  var decreaseCost = monthyCosts();
+  $('#salTotal').html(decreaseCost);
 } // end removeEmployee()
