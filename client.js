@@ -30,7 +30,7 @@ function addNewEmployee() {
   var employeeData = newEmployeeInfo();
 
   var $row = $('<tr>');
-  var $button = '<button type="button" class="empDelete">Delete</button>';
+  var $button = '<button type="button" class="btn btn-danger empDelete">Delete</button>';
   $row.append('<td>'+ employeeData[0] + '</td>');
   $row.append('<td>'+ employeeData[1] + '</td>');
   $row.append('<td>'+ employeeData[2] + '</td>');
