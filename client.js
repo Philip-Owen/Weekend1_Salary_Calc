@@ -32,4 +32,17 @@ function addNewEmployee() {
   $row.data('salary', employeeData[4]);
   $('#employeeData').append($row);
   $('input').not('#submitEmployee').val('');
+  var totalMontlyCost = monthyCosts();
+$('#salTotal').html(totalMontlyCost);
 } // end addNewEmployee()
+
+// Does calculations for getting the monthly salary costs.
+function monthyCosts() {
+  var addedSalaries = 0;
+  var empCount = $('tbody').children().length;
+  for (var i = 1; i <= empCount; i++) {
+    addedSalaries += $('tbody tr:nth-child(' + i + ')').data('salary');
+  }
+  addedSalaries = Number((addedSalaries / 12).toFixed(2));
+  return addedSalaries;
+} // end monthyCosts()
