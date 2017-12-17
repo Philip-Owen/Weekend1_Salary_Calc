@@ -2,10 +2,13 @@ console.log('js');
 
 $(document).ready(onReady);
 
+
 // Runs when DOM is ready
 function onReady() {
   $('#submitEmployee').on('click', addNewEmployee);
+  $('#employeeData').on('click', '.empDelete', removeEmployee);
 } // end onReady() function
+
 
 // Gets info out of input fields and returns an array of the data
 function newEmployeeInfo() {
@@ -19,6 +22,7 @@ function newEmployeeInfo() {
   return employeeInfoArray;
 } // end newEmployeeInfo()
 
+
 // Adds new employee information to the DOM and updates monthy cost calculations
 function addNewEmployee() {
   // Runs newEmployeeInfo() function to retrieve info from input fields so
@@ -26,11 +30,14 @@ function addNewEmployee() {
   var employeeData = newEmployeeInfo();
 
   var $row = $('<tr>');
+  var $button = '<button type="button" class="empDelete">Delete</button>';
   $row.append('<td>'+ employeeData[0] + '</td>');
   $row.append('<td>'+ employeeData[1] + '</td>');
   $row.append('<td>'+ employeeData[2] + '</td>');
   $row.append('<td>'+ employeeData[3] + '</td>');
   $row.append('<td>'+ employeeData[4] + '</td>');
+  $row.append('<td>'+ $button + '</td>');
+  $row.data('salary', employeeData[4]);
 
   // adds a data tag to each row containing the employees salary
   $row.data('salary', employeeData[4]);
@@ -43,7 +50,6 @@ function addNewEmployee() {
   var totalMontlyCost = monthyCosts();
   $('#salTotal').html(totalMontlyCost); // Adds monthly costs to the DOM
 } // end addNewEmployee()
-
 
 
 // Does calculations for getting the monthly salary costs.
@@ -63,3 +69,9 @@ function monthyCosts() {
   var monthlySalaryTotal = Number((employeeSalaryTotal / 12).toFixed(2));
   return monthlySalaryTotal;
 } // end monthyCosts()
+
+
+// Removes employee rows off DOM
+function removeEmployee() {
+  $(this).parents('tr').remove();
+} // end removeEmployee()
