@@ -37,7 +37,6 @@ function addNewEmployee() {
   $row.append('<td>'+ employeeData[3] + '</td>');
   $row.append('<td>'+ employeeData[4] + '</td>');
   $row.append('<td>'+ $button + '</td>');
-  $row.data('salary', employeeData[4]);
 
   // adds a data tag to each row containing the employees salary
   $row.data('salary', employeeData[4]);
