@@ -13,6 +13,8 @@ Employee records can be deleted and monthly salary costs are updated when record
 
 ![screenshot](images/empCalcApp.png)
 
+Application can be tested [here](https://philip-owen.github.io/Weekend1_Salary_Calc/)
+
 ## Built using:
 - HTML
 - CSS/Bootstrap
