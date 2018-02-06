@@ -23,4 +23,5 @@ Application can be tested [here](https://philip-owen.github.io/Weekend1_Salary_C
 
 ## What's Next?
 - [ ] Migrate project to Node.js/Express.
-- [ ] Move employee records and calculator logic to server side.
+- [ ] Move employee records to PostgreSQL database
+- [ ] Convert client side logic from jQuery to AngularJS
